@@ -63,7 +63,7 @@ var dataBasedet;
     console.log(newBullet);
       
         // 7. set the innerHTML of the new paragraph to the search term
-        newBullet.innerHTML = String((inputTerm) + ":  " +(infoTerm));
+        newBullet.innerHTML = String((dataBasetitle) + ":  " +(dataBasedet));
         console.log(newBullet);
       
         // 8. append the new paragraph to the searches div
@@ -88,11 +88,22 @@ deleteButton.addEventListener('click', function() {
     const deleteTerm = EditTaskInput.value;  // Store the input value in 'inputTerm'
     console.log(deleteTerm);  // Log the search term (for demonstration)
 
-        // 4. use the value property of the searchInput to get the search term
-    console.log(inputTerm);
+ const index = deleteTerm-1;
+ console.log(index);
+
+//at this point, attempt to delete it
+//select correct point:
+ dataBasetitle.splice(index,1);
+ dataBasedet.splice(index,1);
+
+console.log(dataBasetitle);
 
 
-    const infoTerm = taskInfo.value; 
+// at this point I want to use the deleteTerm to index back into the list at the correct position
+
+const infoTerm = taskInfo.value; 
+
+
 
 
 })
