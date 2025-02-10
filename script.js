@@ -11,7 +11,11 @@ searchButton.addEventListener('click', function() {
 
         // 4. use the value property of the searchInput to get the search term
     console.log(inputTerm);
-  
+
+    if (!inputTerm) {
+        alert("Please enter a task");
+        return;
+      }  
         // 5. select the searches div using document.getElementById
         var taskTitle = document.getElementById("taskInput");
     console.log(taskTitle);
@@ -22,10 +26,14 @@ searchButton.addEventListener('click', function() {
       
         // 7. set the innerHTML of the new paragraph to the search term
         newParagraph.innerHTML = inputTerm;
-    console.log(newParagraph);
+        console.log(newParagraph);
       
         // 8. append the new paragraph to the searches div
-        taskList.appendChild(newParagraph);
+        const listEl = document.getElementById('taskList');
+        console.log(listEl);
+        listEl.appendChild(newParagraph);
+
+        console.log(taskList);
         
     
 });

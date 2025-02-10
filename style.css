@@ -1,8 +1,52 @@
 
 
-.h1 {
+h1 {
     color:blue;
     background-color: aquamarine;
     font-weight: strong;
+    text-align: center;
     }
 
+    h2 {
+        color:rgb(133, 8, 8);
+        background-color: #7fd0ff;
+        font-weight: strong;
+        text-align: left;
+        }
+
+    .widget {
+        box-shadow: #7fd0ff;
+        border-style: ridge;
+        border-radius: 12px;
+            }
+
+.container {    display: flex;
+                height: 100vh;
+            }
+
+.widget {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+            }
+
+
+button {
+        padding: 10px 20px;
+        background-color: #2d3e50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+            }
+            
+input[type="text"] {
+        padding: 9px;
+        width: 20%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+            }
+            
