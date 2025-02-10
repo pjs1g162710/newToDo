@@ -34,9 +34,17 @@ searchButton.addEventListener('click', function() {
         listEl.appendChild(newParagraph);
 
         console.log(taskList);
-        
+
+        if(!dataBase) {
+            var dataBase = {taskTitle, taskInput};}
+            else {
+            (dataBase.appendChild(taskTitle,taskInput))}
+            
+           console.log(dataBase.taskTitle.value); 
+           console.log(dataBase.taskInput.value); 
     
 });
+
 
 
 
