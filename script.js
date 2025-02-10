@@ -100,33 +100,32 @@ deleteButton.addEventListener('click', function() {
 
 //at this point, attempt to delete it
 //select correct point:
- dataBasetitle.splice(index,1);
- dataBasedet.splice(index,1);
+taskList[0] = "deleted";
+taskList[index] = "deleted";
 
-console.log(dataBasetitle);
+ // dataBasedet.splice(index,1);
 
-var dataBasetitle;
-var dataBasedet; 
+//console.log(dataBasetitle);
 
- console.log(taskTitle);
- console.log(dataBasedet) ;
+//var dataBasetitle;
+//var dataBasedet; 
+
+ //console.log(dataBasetitle);
+ //console.log(dataBasedet) ;
 
 //TRYING SOMETHING NEW HERE
 
-const listContainer = document.querySelector("ol");
+   
+   // const listEl = document.getElementById('taskList');
+    // console.log(listEl);
+     //selectListitem = getElementsByTagName("li");
+    // listEl.removeChild(index);
 
+     console.log(taskList);
 
+     taskList.innerHTML = taskList; 
 
-    displayListItems.innerHTML = tasklist
-    //displayListItems.innerText = listItems; //or this one
-    //displayListItems.textContent = listItems; //or this one
     
-
-
-
-
-
-
 })
 
 
