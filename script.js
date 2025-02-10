@@ -61,21 +61,20 @@ var dataBasedet;
         var newBullet = document.createElement("li");
     console.log(newBullet);
       
-        // Generate the string for the new bullet point
-        newBullet = String((dataBasetitle) + ":  " +(dataBasedet));
+        // Generate the string
+        newBullet.innerHTML = String((dataBasetitle) + ":  " +(dataBasedet));
         console.log(newBullet);
       
-        // 8. append the new list element to the existing list
+        // 8. append the new paragraph to the searches div
         const listEl = document.getElementById('taskList');
         console.log(listEl);
         listEl.appendChild(newBullet);
 
-       
-
-        taskList.innerHTML = taskList; 
         console.log(taskList);
 
-    })
+        taskList.innerHTML = taskList; 
+
+      })
 
 
       
@@ -91,6 +90,11 @@ deleteButton.addEventListener('click', function() {
     const deleteTerm = EditTaskInput.value;  // Store the input value in 'inputTerm'
     console.log(deleteTerm);  // Log the search term (for demonstration)
 
+    if (!deleteTerm) {
+        alert("Please enter list item number. The number must be present on the list");
+        return;
+      } 
+
  const index = deleteTerm-1;
  console.log(index);
 
@@ -100,6 +104,24 @@ deleteButton.addEventListener('click', function() {
  dataBasedet.splice(index,1);
 
 console.log(dataBasetitle);
+
+var dataBasetitle;
+var dataBasedet; 
+
+ console.log(taskTitle);
+ console.log(dataBasedet) ;
+
+//TRYING SOMETHING NEW HERE
+
+const listContainer = document.querySelector("ol");
+
+
+
+    displayListItems.innerHTML = tasklist
+    //displayListItems.innerText = listItems; //or this one
+    //displayListItems.textContent = listItems; //or this one
+    
+
 
 
 
