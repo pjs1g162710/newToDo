@@ -51,29 +51,32 @@ var dataBasedet;
  console.log(taskTitle);
  console.log(dataBasedet) ;
 
+ 
+   // This collects the right output point from the index doc
+   var taskTitle = document.getElementById("taskInput");
+   console.log(taskTitle);
 
-
-//THIS SECTION PRINTS THE TASK TITLE LIST ON THE PAGE
-        // 5. select the searches div using document.getElementById
-        var taskTitle = document.getElementById("taskInput");
-    console.log(taskTitle);
-      
+       
         // 6. create a new li element using document.createElement
         var newBullet = document.createElement("li");
     console.log(newBullet);
       
-        // 7. set the innerHTML of the new paragraph to the search term
-        newBullet.innerHTML = String((dataBasetitle) + ":  " +(dataBasedet));
+        // Generate the string for the new bullet point
+        newBullet = String((dataBasetitle) + ":  " +(dataBasedet));
         console.log(newBullet);
       
-        // 8. append the new paragraph to the searches div
+        // 8. append the new list element to the existing list
         const listEl = document.getElementById('taskList');
         console.log(listEl);
         listEl.appendChild(newBullet);
 
+       
+
+        taskList.innerHTML = taskList; 
         console.log(taskList);
 
-        taskList.innerHTML = taskList; })
+    })
+
 
       
 //Here I cheat and use the event listener on the submit button to manually select the
@@ -98,10 +101,6 @@ deleteButton.addEventListener('click', function() {
 
 console.log(dataBasetitle);
 
-
-// at this point I want to use the deleteTerm to index back into the list at the correct position
-
-const infoTerm = taskInfo.value; 
 
 
 
