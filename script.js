@@ -4,6 +4,9 @@
 const searchButton = document.getElementById('searchButton');
 const searchInput = document.getElementById('taskInput');
 
+const dataBasetitle = [];
+const  dataBasedet = [];
+
 // Event listener for the search button
 searchButton.addEventListener('click', function() {
     const inputTerm = taskInput.value;  // Store the input value in 'inputTerm'
@@ -29,37 +32,68 @@ searchButton.addEventListener('click', function() {
         return;
       }  
 
+ // Try to create an array with this:
+
+ if(!dataBasetitle) {
+ dataBasetitle = new Array(inputTerm);
+ dataBasedet = new Array(infoTerm);
+} 
+ else {
+ dataBasetitle.push(inputTerm);
+ dataBasedet.push(infoTerm);
+}
+
+ console.log(dataBasetitle) ;
+
+var dataBasetitle;
+var dataBasedet; 
+
+ console.log(taskTitle);
+ console.log(dataBasedet) ;
+
+
+
 //THIS SECTION PRINTS THE TASK TITLE LIST ON THE PAGE
         // 5. select the searches div using document.getElementById
         var taskTitle = document.getElementById("taskInput");
     console.log(taskTitle);
       
         // 6. create a new li element using document.createElement
-        var newParagraph = document.createElement("li");
-    console.log(newParagraph);
+        var newBullet = document.createElement("li");
+    console.log(newBullet);
       
         // 7. set the innerHTML of the new paragraph to the search term
-        newParagraph.innerHTML = inputTerm;
-        console.log(newParagraph);
+        newBullet.innerHTML = inputTerm;
+        console.log(newBullet);
       
         // 8. append the new paragraph to the searches div
         const listEl = document.getElementById('taskList');
         console.log(listEl);
-        listEl.appendChild(newParagraph);
+        listEl.appendChild(newBullet);
 
         console.log(taskList);
 
+        taskList.innerHTML = taskList;
+
+      
+//Here I take the cheat and use the event listener on the submit button to manually select the
+//task to edit
+
+
+
+
+
 //IN THIS SECTION I AM TRYING TO PULL INPUTS INTO A LIST
 
-        if(!dataBase) {
-            var dataBase = {taskTitle, taskInput};}
-            else {
-            (dataBase.appendChild(taskTitle,taskInput))}
+        //if(!dataBase) {
+          //  var dataBase = {inputTerm, infoTerm};}
+        //    else {
+         //   (dataBase.appendChild(inputTerm, infoTerm))}
             
-           console.log(dataBase.taskTitle.value); 
-           console.log(dataBase.taskInput.value); 
+         //  console.log(taskList); 
+          // console.log(dataBase.taskInput.value); 
 
-           dataBase.innerHTML = dataBase.taskTitle.value;
+         //  dataBase.innerHTML = dataBase;
     
 });
 
