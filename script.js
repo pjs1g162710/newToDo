@@ -63,7 +63,7 @@ var dataBasedet;
     console.log(newBullet);
       
         // 7. set the innerHTML of the new paragraph to the search term
-        newBullet.innerHTML = inputTerm;
+        newBullet.innerHTML = String((inputTerm) + ":  " +(infoTerm));
         console.log(newBullet);
       
         // 8. append the new paragraph to the searches div
@@ -73,34 +73,28 @@ var dataBasedet;
 
         console.log(taskList);
 
-        taskList.innerHTML = taskList;
+        taskList.innerHTML = taskList; })
 
       
-//Here I take the cheat and use the event listener on the submit button to manually select the
-//task to edit
+//Here I cheat and use the event listener on the submit button to manually select the
+//task to edit/delete
+
+// Store references to the search button and input field
+const deleteButton = document.getElementById('deleteButton');
+const deleteInput = document.getElementById('EditTaskInput');
+
+// Event listener for the delete button
+deleteButton.addEventListener('click', function() {
+    const deleteTerm = EditTaskInput.value;  // Store the input value in 'inputTerm'
+    console.log(deleteTerm);  // Log the search term (for demonstration)
+
+        // 4. use the value property of the searchInput to get the search term
+    console.log(inputTerm);
 
 
+    const infoTerm = taskInfo.value; 
 
 
-
-//IN THIS SECTION I AM TRYING TO PULL INPUTS INTO A LIST
-
-        //if(!dataBase) {
-          //  var dataBase = {inputTerm, infoTerm};}
-        //    else {
-         //   (dataBase.appendChild(inputTerm, infoTerm))}
-            
-         //  console.log(taskList); 
-          // console.log(dataBase.taskInput.value); 
-
-         //  dataBase.innerHTML = dataBase;
-    
-});
-
-
-
-
-
-
+})
 
 
